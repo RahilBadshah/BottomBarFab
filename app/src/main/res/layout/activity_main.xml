@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context=".MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.BottomAppBar"
+            app:fabCradleRoundedCornerRadius="16dp"
+            android:layout_height="wrap_content"
+            app:fabCradleMargin="10dp"
+            app:navigationIcon="@drawable/ic_round_menu"
+            android:backgroundTint="@color/white"
+            app:menu="@menu/bottom_bar_menu"
+            android:layout_gravity="bottom"
+            app:fabAnimationMode="slide"
+            android:theme="@style/Theme.BottomBarFab"
+            tools:ignore="BottomAppBar" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/bottom_bar_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/ic_round_add"
+            app:borderWidth="0dp"
+            app:fabSize="auto"
+            app:layout_anchor="@id/bottomAppBar"
+            app:layout_anchorGravity="center" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
